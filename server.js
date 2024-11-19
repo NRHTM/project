@@ -1,7 +1,11 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');  // Import CORS package
 const app = express();
 const port = 3000;
+
+// Enable CORS for all origins
+app.use(cors());  // This will allow cross-origin requests from any domain
 
 // Serve static HTML form at the root route
 app.get('/', (req, res) => {
